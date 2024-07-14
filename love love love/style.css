@@ -1,0 +1,637 @@
+/* Define CSS variables for easy theme management */
+:root {
+  --primary-color-start: #6a82fb; /* Updated gradient start */
+  --primary-color-end: #fc5c7d; /* Updated gradient end */
+  --animation-color: rgb(255, 255, 255); /* White for a modern look */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: linear-gradient(270deg, #ffafbd, #ffc3a0);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+canvas {
+  width: 100dvmin;
+  aspect-ratio: 1;
+  z-index: 1;
+}
+
+@keyframes floatText {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.floating-text {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+  animation: floatText 5s ease-in-out infinite;
+}
+
+.container * {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  z-index: 200;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 20, 147, 0.75);
+  animation: love-burst 3s ease-in-out infinite;
+  animation: floatBubble 6s linear infinite;
+}
+
+@keyframes floatBubble {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1);
+  }
+}
+
+.bubble:nth-child(1) {
+  top: 8%;
+  left: 60%;
+  height: 11vmin;
+  width: 11vmin;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(2) {
+  top: 83%;
+  left: 14%;
+  height: 20vmin;
+  width: 20vmin;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(3) {
+  top: 25%;
+  left: 49%;
+  height: 4vmin;
+  width: 4vmin;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(4) {
+  top: 63%;
+  left: 93%;
+  height: 3vmin;
+  width: 3vmin;
+  -webkit-animation-delay: 0.45s;
+  animation-delay: 0.45s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(5) {
+  top: 7%;
+  left: 56%;
+  height: 18vmin;
+  width: 18vmin;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(6) {
+  top: 10%;
+  left: 68%;
+  height: 5vmin;
+  width: 5vmin;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(7) {
+  top: 68%;
+  left: 1%;
+  height: 5vmin;
+  width: 5vmin;
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(8) {
+  top: 61%;
+  left: 51%;
+  height: 11vmin;
+  width: 11vmin;
+  -webkit-animation-delay: 1.05s;
+  animation-delay: 1.05s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(9) {
+  top: 24%;
+  left: 45%;
+  height: 11vmin;
+  width: 11vmin;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(10) {
+  top: 13%;
+  left: 10%;
+  height: 19vmin;
+  width: 19vmin;
+  -webkit-animation-delay: 1.35s;
+  animation-delay: 1.35s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(11) {
+  top: 76%;
+  left: 7%;
+  height: 14vmin;
+  width: 14vmin;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(12) {
+  top: 22%;
+  left: 8%;
+  height: 17vmin;
+  width: 17vmin;
+  -webkit-animation-delay: 1.65s;
+  animation-delay: 1.65s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(13) {
+  top: 23%;
+  left: 81%;
+  height: 16vmin;
+  width: 16vmin;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(14) {
+  top: 77%;
+  left: 88%;
+  height: 3vmin;
+  width: 3vmin;
+  -webkit-animation-delay: 1.95s;
+  animation-delay: 1.95s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(15) {
+  top: 41%;
+  left: 1%;
+  height: 9vmin;
+  width: 9vmin;
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(16) {
+  top: 51%;
+  left: 51%;
+  height: 8vmin;
+  width: 8vmin;
+  -webkit-animation-delay: 2.25s;
+  animation-delay: 2.25s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(17) {
+  top: 37%;
+  left: 65%;
+  height: 11vmin;
+  width: 11vmin;
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(18) {
+  top: 11%;
+  left: 83%;
+  height: 18vmin;
+  width: 18vmin;
+  -webkit-animation-delay: 2.55s;
+  animation-delay: 2.55s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(19) {
+  top: 64%;
+  left: 86%;
+  height: 12vmin;
+  width: 12vmin;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+.bubble:nth-child(20) {
+  top: 39%;
+  left: 24%;
+  height: 19vmin;
+  width: 19vmin;
+  -webkit-animation-delay: 2.85s;
+  animation-delay: 2.85s;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+
+@keyframes love-burst {
+  0%, 100% {
+    transform: scale(0);
+    box-shadow: inset 0 0 0 10vmin transparent;
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: inset 0 0 0 0 var(--animation-color);
+  }
+}
+
+.heart {
+  fill: red;
+  opacity: 1;
+  transition: fill 0.5s ease;
+}
+
+.heart:hover {
+  transform: scale(1.1);
+  fill: #ff99aa;
+  cursor: pointer;
+}
+
+.bubble:nth-child(1) .heart {
+  -webkit-animation: love 3s forwards infinite 0s;
+  animation: love 3s forwards infinite 0s;
+  -webkit-transform: scale(0.5) rotate(-4deg);
+  transform: scale(0.5) rotate(-4deg);
+}
+
+.bubble:nth-child(2) .heart {
+  -webkit-animation: love 3s forwards infinite 0.15s;
+  animation: love 3s forwards infinite 0.15s;
+  -webkit-transform: scale(0.5) rotate(22deg);
+  transform: scale(0.5) rotate(22deg);
+}
+
+.bubble:nth-child(3) .heart {
+  -webkit-animation: love 3s forwards infinite 0.3s;
+  animation: love 3s forwards infinite 0.3s;
+  -webkit-transform: scale(0.5) rotate(-5deg);
+  transform: scale(0.5) rotate(-5deg);
+}
+
+.bubble:nth-child(4) .heart {
+  -webkit-animation: love 3s forwards infinite 0.45s;
+  animation: love 3s forwards infinite 0.45s;
+  -webkit-transform: scale(0.5) rotate(50deg);
+  transform: scale(0.5) rotate(50deg);
+}
+
+.bubble:nth-child(5) .heart {
+  -webkit-animation: love 3s forwards infinite 0.6s;
+  animation: love 3s forwards infinite 0.6s;
+  -webkit-transform: scale(0.5) rotate(-29deg);
+  transform: scale(0.5) rotate(-29deg);
+}
+
+.bubble:nth-child(6) .heart {
+  -webkit-animation: love 3s forwards infinite 0.75s;
+  animation: love 3s forwards infinite 0.75s;
+  -webkit-transform: scale(0.5) rotate(35deg);
+  transform: scale(0.5) rotate(35deg);
+}
+
+.bubble:nth-child(7) .heart {
+  -webkit-animation: love 3s forwards infinite 0.9s;
+  animation: love 3s forwards infinite 0.9s;
+  -webkit-transform: scale(0.5) rotate(-5deg);
+  transform: scale(0.5) rotate(-5deg);
+}
+
+.bubble:nth-child(8) .heart {
+  -webkit-animation: love 3s forwards infinite 1.05s;
+  animation: love 3s forwards infinite 1.05s;
+  -webkit-transform: scale(0.5) rotate(40deg);
+  transform: scale(0.5) rotate(40deg);
+}
+
+.bubble:nth-child(9) .heart {
+  -webkit-animation: love 3s forwards infinite 1.2s;
+  animation: love 3s forwards infinite 1.2s;
+  -webkit-transform: scale(0.5) rotate(-35deg);
+  transform: scale(0.5) rotate(-35deg);
+}
+
+.bubble:nth-child(10) .heart {
+  -webkit-animation: love 3s forwards infinite 1.35s;
+  animation: love 3s forwards infinite 1.35s;
+  -webkit-transform: scale(0.5) rotate(28deg);
+  transform: scale(0.5) rotate(28deg);
+}
+
+.bubble:nth-child(11) .heart {
+  -webkit-animation: love 3s forwards infinite 1.5s;
+  animation: love 3s forwards infinite 1.5s;
+  -webkit-transform: scale(0.5) rotate(-3deg);
+  transform: scale(0.5) rotate(-3deg);
+}
+
+.bubble:nth-child(12) .heart {
+  -webkit-animation: love 3s forwards infinite 1.65s;
+  animation: love 3s forwards infinite 1.65s;
+  -webkit-transform: scale(0.5) rotate(48deg);
+  transform: scale(0.5) rotate(48deg);
+}
+
+.bubble:nth-child(13) .heart {
+  -webkit-animation: love 3s forwards infinite 1.8s;
+  animation: love 3s forwards infinite 1.8s;
+  -webkit-transform: scale(0.5) rotate(-33deg);
+  transform: scale(0.5) rotate(-33deg);
+}
+
+.bubble:nth-child(14) .heart {
+  -webkit-animation: love 3s forwards infinite 1.95s;
+  animation: love 3s forwards infinite 1.95s;
+  -webkit-transform: scale(0.5) rotate(40deg);
+  transform: scale(0.5) rotate(40deg);
+}
+
+.bubble:nth-child(15) .heart {
+  -webkit-animation: love 3s forwards infinite 2.1s;
+  animation: love 3s forwards infinite 2.1s;
+  -webkit-transform: scale(0.5) rotate(-29deg);
+  transform: scale(0.5) rotate(-29deg);
+}
+
+.bubble:nth-child(16) .heart {
+  -webkit-animation: love 3s forwards infinite 2.25s;
+  animation: love 3s forwards infinite 2.25s;
+  -webkit-transform: scale(0.5) rotate(19deg);
+  transform: scale(0.5) rotate(19deg);
+}
+
+.bubble:nth-child(17) .heart {
+  -webkit-animation: love 3s forwards infinite 2.4s;
+  animation: love 3s forwards infinite 2.4s;
+  -webkit-transform: scale(0.5) rotate(-29deg);
+  transform: scale(0.5) rotate(-29deg);
+}
+
+.bubble:nth-child(18) .heart {
+  -webkit-animation: love 3s forwards infinite 2.55s;
+  animation: love 3s forwards infinite 2.55s;
+  -webkit-transform: scale(0.5) rotate(14deg);
+  transform: scale(0.5) rotate(14deg);
+}
+
+.bubble:nth-child(19) .heart {
+  -webkit-animation: love 3s forwards infinite 2.7s;
+  animation: love 3s forwards infinite 2.7s;
+  -webkit-transform: scale(0.5) rotate(-10deg);
+  transform: scale(0.5) rotate(-10deg);
+}
+
+.bubble:nth-child(20) .heart {
+  -webkit-animation: love 3s forwards infinite 2.85s;
+  animation: love 3s forwards infinite 2.85s;
+  -webkit-transform: scale(0.5) rotate(46deg);
+  transform: scale(0.5) rotate(46deg);
+}
+
+@keyframes love {
+  0%, 100% {
+    transform: scale(0.5);
+    fill: red;
+  }
+  50% {
+    transform: scale(0.75);
+    fill: var(--animation-color);
+  }
+}
+
+/* Additional styles for love letter cards */
+.love-letter {
+  position: absolute;
+  width: 15vmin;
+  height: 20vmin;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  color: var(--primary-color-end);
+  padding: 10px;
+  box-sizing: border-box;
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Floating text banner */
+.floating-banner {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+  text-align: center;
+  color: var(--primary-color-end);
+  font-size: 3em;
+  font-weight: bold;
+  animation: floatBanner 6s ease-in-out infinite;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+@keyframes floatBanner {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .floating-banner {
+    font-size: 2em; /* Smaller text on smaller screens */
+  }
+  .love-letter {
+    width: 30vmin; /* Larger to be more readable on small devices */
+    height: 40vmin;
+  }
+}
+
+/* Example HTML for love letter cards and floating banner */ 
+/* Base style for love letters */
+.love-letter {
+  position: absolute;
+  width: 15vmin;
+  height: 20vmin;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  color: var(--primary-color-end);
+  padding: 10px;
+  box-sizing: border-box;
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+/* Individual animations for each card to float differently */
+@keyframes floatCard1 {
+  0%, 100% { transform: translatey(0px); }
+  50% { transform: translatey(-20px); }
+}
+
+@keyframes floatCard2 {
+  0%, 100% { transform: translatey(0px); }
+  50% { transform: translatey(20px); }
+}
+
+@keyframes floatCard3 {
+  0%, 100% { transform: translatey(0px); }
+  50% { transform: translatey(-10px); }
+}
+
+@keyframes floatCard4 {
+  0%, 100% { transform: translatey(0px); }
+  50% { transform: translatey(10px); }
+}
+
+/* Applying unique animations to each card */
+.bubbles > .love-letter:nth-of-type(1) {
+  top: 10%;
+  left: 5%;
+  animation-name: floatCard1;
+}
+
+.bubbles > .love-letter:nth-of-type(2) {
+  top: 20%;
+  right: 10%;
+  animation-name: floatCard2;
+}
+
+.bubbles > .love-letter:nth-of-type(3) {
+  bottom: 30%;
+  left: 50%; /* Adjusted to center it more */
+  transform: translateX(-50%); /* Centering the card horizontally */
+  animation-name: floatCard3;
+}
+
+.bubbles > .love-letter:nth-of-type(4) {
+  bottom: 10%;
+  right: 5%;
+  animation-name: floatCard4;
+}.carousel {
+  width: 100%;
+  overflow: hidden;
+  height: 45vh;
+}
+
+.carousel-inner {
+  display: flex;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} .audio-player {
+  z-index: 10; /* Or any value higher than your bubbles z-index */
+}
+
+.bubbles {
+  z-index: 5; /* Or your existing z-index value */
+}
